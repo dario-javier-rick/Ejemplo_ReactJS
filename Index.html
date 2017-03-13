@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba React JS en Llamadas Scoring</title>
+</head>
+<body>
+
+<input data-val="true" data-val-required="El campo sonLlamadasCerradas es obligatorio." id="sonLlamadasCerradas" name="sonLlamadasCerradas" type="hidden" value="False" />
+
+<div id='divApp'> </div>
+
+<table id="tablaLlamadas" class="table" data-toggle="table" data-height="299">
+    <thead align="center">
+        <tr>
+            <th class="text-center" data-field="FechaCarga" style="">
+                Fecha de carga
+            </th>
+            <th class="text-center" data-field="FechaImportacion">
+                <a href="/Llamadas/PanelScoring?sortOrder=D%C3%ADas%20pendientes">Días pendientes</a>
+            </th>
+
+            <th class="text-center" data-field="NumeroSolicitud">
+                <a href="/Llamadas/PanelScoring?sortOrder=N%C3%BAmero%20de%20solicitud">Número de solicitud</a>
+            </th>
+
+            <th class="text-center" data-field="Razon Social">
+                <a href="/Llamadas/PanelScoring?sortOrder=Razon%20Social">Razon Social</a>
+            </th>
+
+            <th class="text-center" data-field="Comercializadora">
+                <a href="/Llamadas/PanelScoring?sortOrder=Comercializadora">Comercializadora</a>
+            </th>
+
+            <th class="text-center" data-field="Marca">
+                <a href="/Llamadas/PanelScoring?sortOrder=Marca">Marca</a>
+            </th>
+
+            <th class="text-center" data-field="Franjas contactado" style="">Franjas contactado</th>
+
+            <th class="text-center" data-field="Estado llamada" style="">
+                <a href="/Llamadas/PanelScoring?sortOrder=Estado%20llamada">Estado llamada</a>
+            </th>
+
+            <th class="text-center" data-field="Estado plan" style="display:none;">
+                <a href="/Llamadas/PanelScoring?sortOrder=Estado%20plan">Estado plan</a>
+            </th>
+
+            <th class="text-center" data-field="Ver cuestionario" style="display:none;"></th>
+
+            <th class="text-center" data-field="Llamar"></th>
+
+        </tr>
+
+    </thead>
+    <tbody id="tablaLlamadasBody">
+
+		<!--For each panel de llamadas-->
+        <tr class="">
+
+            <td align="center" style="">06/03/2017</td>
+            <td align="center"><span class="label label-danger" style="font-size: 100%">6</span></td>
+            <td align="center">1220595</td>
+            <td align="center"> OSCAR EDUARDO GARCIA</td>
+            <td align="center"> Comercializadora 1</td>
+            <td align="center" id="colMarca">Ford</td>
+            <td align="center">
+                <div class="btn-group">
+                    <label class="btn-xs btn-info glyphicon glyphicon-ok"></label>
+                    <label class="btn-xs btn-info glyphicon glyphicon-ok"></label>
+                    <label class="btn-xs btn-info glyphicon glyphicon-ok"></label>
+                    <label class="btn-xs btn-info glyphicon glyphicon-ok"></label>
+                </div>
+            </td>
+            <!--td align="center">estadoUltimaLlamada</td-->
+            <td align="center">Contestador</td>
+
+            <td td="" align="center">
+                <a class="btn btn-success btn-small" href="/Cuestionario/CuestionarioScoring?idPlan=3424">
+                    <i class="fa fa-phone"></i> Llamar
+                </a>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+<!--Estilos-->
+<link rel="stylesheet" type="text/css" href="./Content/css/Site.css" />
+<link rel="stylesheet" type="text/css" href="./Content/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="./Content/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="./Content/css/all.min.css" />
+
+<!--Scripts-->
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./Content/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./Content/js/shieldui-lite-all.min.js"></script>
+
+<!--Scripts nuevos (React JS + JSX) -->
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+<script type="text/javascript" src='./Content/js/app-dist.js'></script>
+
+</body>
+</html>
